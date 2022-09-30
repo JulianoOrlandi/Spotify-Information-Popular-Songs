@@ -10,12 +10,13 @@ df = pandas.DataFrame()
 
 for i in range(len(files)):
     x = pandas.read_csv('raw_data_charts/' + files[i])
-    x.drop(x.columns.difference(['uri']), axis=1, inplace=True)
+    x.drop(x.columns.difference(['uri', 'artist_names', 'track_name']), axis=1, inplace=True)
     df = pandas.concat([df,x])
     if i == (len(files) - 1):
         df = df.drop_duplicates()
         df['uri'] = df['uri'].str.replace('spotify:track:','')
 tracks_id = df.uri.values.tolist()
+df = df.assign(key='', mode='', tempo='', duration_ms='', time_signature='')
 
 #--------------------------------------------------------------------------------------------------
 # API information:

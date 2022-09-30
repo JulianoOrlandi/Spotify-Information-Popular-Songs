@@ -133,3 +133,6 @@ creds.py
 
 # Folder with the spotify charts:
 raw_data_charts/
+
+# Final .csv file:
+top_songs_audio_features_2018_2022.csv
