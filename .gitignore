@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Credentials to Spotify API
+creds.py
+
+# Folder with the spotify charts:
+raw_data_charts/
