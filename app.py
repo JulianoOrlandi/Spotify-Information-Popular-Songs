@@ -58,6 +58,6 @@ for i in range(round(len(tracks_id)/100)):
 
 #---------------------------------------------------------------------------------------------
 # Convert the dataframe into a .csv file:
-df.to_csv('top_songs_audio_features_2018_2022.csv')
+df.to_csv('top_songs_audio_features_2018_2022.csv', index=None)
 
 
